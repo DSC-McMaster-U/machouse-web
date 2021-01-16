@@ -1,6 +1,5 @@
 import React from "react";
-import { ScrollView, View, Text, StyleSheet } from "react-native";
-import { Avatar } from "react-native-paper";
+import { ScrollView, StyleSheet } from "react-native";
 
 import Message from "./Message";
 
