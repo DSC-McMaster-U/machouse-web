@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import { View, StyleSheet } from "react-native";
 
 import MessageInput from "../components/MessageInput";
@@ -7,7 +7,7 @@ import NavBar from "../components/NavBar";
 import ScreenTitle from "../components/ScreenTitle";
 
 const ChatScreen = (props) => {
-  const dummyText = [
+  const [messages, setMessages] = useState([
     {
       sender: "Leo S",
       initials: "LS",
@@ -25,18 +25,30 @@ const ChatScreen = (props) => {
     {
       sender: "Leo S",
       initials: "LS",
-      message:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occa",
+      message: "Harrison do your dishes!",
       id: Math.random(),
       timestamp: "9:10 PM",
     },
-  ];
+  ]);
+
+  const displayMessagesHandler = (text) => {
+    setMessages((currentMessages) => [
+      ...currentMessages,
+      {
+        sender: "Leo S",
+        initials: "LS",
+        message: text,
+        id: Math.random(),
+        timestamp: "7:00 PM",
+      },
+    ]);
+  };
 
   return (
     <View style={styles.screen}>
       <ScreenTitle screenTitle="House Chat" />
-      <MessageList messages={dummyText} messageListStyle={styles.messageView} />
-      <MessageInput />
+      <MessageList messages={messages} messageListStyle={styles.messageView} />
+      <MessageInput onSend={displayMessagesHandler} />
       <NavBar style={styles.bottom} />
     </View>
   );
