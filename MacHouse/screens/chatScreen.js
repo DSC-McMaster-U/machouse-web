@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import { View, StyleSheet } from "react-native";
+import { View, StyleSheet, KeyboardAvoidingView } from "react-native";
 
 import MessageInput from "../components/MessageInput";
 import MessageList from "../components/MessageList";
@@ -47,8 +47,10 @@ const ChatScreen = (props) => {
   return (
     <View style={styles.screen}>
       <ScreenTitle screenTitle="House Chat" />
-      <MessageList messages={messages} messageListStyle={styles.messageView} />
-      <MessageInput onSend={displayMessagesHandler} />
+      <KeyboardAvoidingView behavior="padding" style={styles.messageView}>
+        <MessageList messages={messages} />
+        <MessageInput onSend={displayMessagesHandler} />
+      </KeyboardAvoidingView>
       <NavBar style={styles.bottom} />
     </View>
   );

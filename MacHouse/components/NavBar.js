@@ -2,7 +2,7 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import { Appbar } from "react-native-paper";
 
-const NavBar = (props) => {
+const NavBar = () => {
   return (
     <Appbar style={styles.nav}>
       <Appbar.Action icon="chat" onPress={() => console.log("Pressed chat")} />
