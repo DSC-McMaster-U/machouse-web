@@ -28,6 +28,8 @@ const MessageInput = (props) => {
     <View style={styles.inputContainer}>
       <TextInput
         mode="outlined"
+        selectionColor="#850044"
+        outlineColor="#850044"
         placeholder="Send a message"
         style={styles.messageBox}
         onChangeText={messageTextHandler}
@@ -35,6 +37,7 @@ const MessageInput = (props) => {
       />
       <IconButton
         icon="send"
+        color="#850044"
         size={26}
         animated="true"
         onPress={() => sendMessageHandler(messageText)}
