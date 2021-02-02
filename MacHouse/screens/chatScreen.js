@@ -31,6 +31,7 @@ const ChatScreen = (props) => {
     },
   ]);
 
+  // add new message to messages state
   const displayMessagesHandler = (text) => {
     setMessages((currentMessages) => [
       ...currentMessages,

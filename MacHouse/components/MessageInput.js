@@ -9,19 +9,24 @@ const MessageInput = (props) => {
     setMessageText(enteredText);
   };
 
+  // overall procedure for sending a message
   const sendMessageHandler = (message) => {
     props.onSend(message);
     setMessageText("");
     resetInputHandler();
   };
 
+  // Add a reference to the message input field for clearing
   const sendMessageInput = useRef();
+
+  // reset input flag to clear the message input field
   const [resetInput, setResetInput] = useState(true);
 
   const resetInputHandler = () => {
     resetInput ? setResetInput(!resetInput) : setResetInput(!resetInput);
   };
 
+  // clears the message input field on message send
   useEffect(() => sendMessageInput.current.clear(), [resetInput]);
 
   return (

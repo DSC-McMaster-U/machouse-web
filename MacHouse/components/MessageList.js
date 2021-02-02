@@ -1,11 +1,12 @@
 import React from "react";
-import { ScrollView, StyleSheet } from "react-native";
+import { ScrollView } from "react-native";
 
 import Message from "./Message";
 
 const MessageList = (props) => {
   const { messages, messageListStyle } = props;
 
+  // output all the messages into a scrollview
   return (
     <ScrollView style={messageListStyle}>
       {messages.map((message) => (
@@ -20,7 +21,5 @@ const MessageList = (props) => {
     </ScrollView>
   );
 };
-
-const styles = StyleSheet.create({});
 
 export default MessageList;

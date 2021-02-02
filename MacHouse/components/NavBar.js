@@ -2,6 +2,7 @@ import React from "react";
 import { StyleSheet } from "react-native";
 import { Appbar } from "react-native-paper";
 
+// set up nav bar just for show for now
 const NavBar = () => {
   return (
     <Appbar style={styles.nav}>
