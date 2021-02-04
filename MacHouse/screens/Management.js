@@ -8,7 +8,6 @@ import {
   ScrollView,
   TouchableOpacity,
   TextInput,
-  Alert,
 } from "react-native";
 import FinancesTable from "../components/FinancesTable";
 import { chores } from "../sampleData";
@@ -20,87 +19,19 @@ const Management = () => {
   const [choresText, setChoresText] = useState("");
   const [shoppingListText, setShoppingListText] = useState("");
 
-  // const [chores, setChores] = useState([
-  //   {
-  //     title: "Take out trash",
-  //     id: Math.floor(Math.random() * 1001),
-  //   },
-  //   {
-  //     title: "Clean the kitchen",
-  //     id: Math.floor(Math.random() * 1001),
-  //   },
-  //   {
-  //     title: "Sweep the living room",
-  //     id: Math.floor(Math.random() * 1001),
-  //   },
-  //   {
-  //     title: "Clean the washroom",
-  //     id: Math.floor(Math.random() * 1001),
-  //   },
-  // ]);
-
-  // const [shoppingList, setShoppingList] = useState([
-  //   {
-  //     title: "Eggs",
-  //     id: Math.floor(Math.random() * 1001),
-  //   },
-  //   {
-  //     title: "Bread",
-  //     id: Math.floor(Math.random() * 1001),
-  //   },
-  //   {
-  //     title: "Milk",
-  //     id: Math.floor(Math.random() * 1001),
-  //   },
-  //   {
-  //     title: "Apples",
-  //     id: Math.floor(Math.random() * 1001),
-  //   },
-  // ]);
-
   const removeChore = (id) => {
-    // setChores((prevItems) => {
-    //   return prevItems.filter((elem) => elem.id != id);
-    // });
     console.log("removed chore");
   };
 
   const removeShoppingItem = (id) => {
-    // setShoppingList((prevItems) => {
-    //   return prevItems.filter((elem) => elem.id != id);
-    // });
     console.log("removed shopping item");
   };
   const addShoppingListItem = (text) => {
-    // if (!text) {
-    //   Alert.alert("Error", "Please enter an item", { text: "Ok" });
-    // } else {
-    //   setShoppingList((prevItems) => {
-    //     return [
-    //       { id: Math.floor(Math.random() * 1001), title: text },
-    //       ...prevItems,
-    //     ];
-    //   });
-    // }
     console.log("added item");
   };
   const addChore = (text) => {
-    // if (!text) {
-    //   Alert.alert("Error", "Please enter an item", { text: "Ok" });
-    // } else {
-    //   setChores((prevItems) => {
-    //     return [
-    //       { id: Math.floor(Math.random() * 1001), title: text },
-    //       ...prevItems,
-    //     ];
-    //   });
-    // }
-    // setChoresText("");
     console.log("added chore");
   };
-
-  //   const onChoresTextChange = (text) => setChoresText(text);
-  //   const onShoppingListTextChange = (text) => setShoppingListText(text);
 
   return (
     <ScrollView style={styles.container}>
