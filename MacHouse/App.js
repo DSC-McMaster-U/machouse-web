@@ -1,6 +1,6 @@
 import React from "react";
-import { StyleSheet, Text, View } from "react-native";
-import Calendar from "./Components/Calendar";
+import { StyleSheet, Text, SafeAreaView } from "react-native";
+import Calendar from "./screens/Calendar";
 
 export default function App() {
   return <Calendar></Calendar>;

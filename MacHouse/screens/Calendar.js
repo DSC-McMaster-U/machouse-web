@@ -4,14 +4,13 @@ import {
   StyleSheet,
   Button,
   Modal,
-  View,
   TouchableOpacity,
   Text,
 } from "react-native";
 import { Agenda } from "react-native-calendars";
 import uuid from "uuid-random";
-import RenderItem from "./RenderItem";
-import EventForm from "./EventForm";
+import RenderItem from "../components/RenderItem";
+import EventForm from "../components/EventForm";
 import { Ionicons } from "@expo/vector-icons";
 
 const timeToString = (time) => {
@@ -97,7 +96,7 @@ const Calendar = () => {
   return (
     <SafeAreaView style={styles.safe}>
       <Modal visible={modalOpen} animationType="slide">
-        <View style={StyleSheet.modalContent}>
+        <SafeAreaView style={StyleSheet.modalContent}>
           <Ionicons
             name="close"
             onPress={() => setMOdalOpen(false)}
@@ -110,10 +109,11 @@ const Calendar = () => {
             addItem={addItem}
             setModalOpen={setMOdalOpen}
           ></EventForm>
-        </View>
+        </SafeAreaView>
       </Modal>
 
       <Agenda
+        style={StyleSheet.agenda}
         items={items}
         renderItem={(item) => (
           <RenderItem item={item} items={items} delItem={delItem}></RenderItem>
@@ -151,6 +151,7 @@ const Calendar = () => {
 const styles = StyleSheet.create({
   safe: {
     flex: 1,
+    paddingTop: 20,
   },
   itemContainer: {
     backgroundColor: "white",

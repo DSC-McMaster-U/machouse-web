@@ -1,5 +1,11 @@
 import React from "react";
-import { Text, View, Button, TouchableOpacity, StyleSheet } from "react-native";
+import {
+  Text,
+  Button,
+  TouchableOpacity,
+  StyleSheet,
+  SafeAreaView,
+} from "react-native";
 import { Card, Avatar } from "react-native-paper";
 import { Ionicons } from "@expo/vector-icons";
 
@@ -8,7 +14,7 @@ const RenderItem = ({ item, items, delItem }) => {
     <TouchableOpacity style={{ marginRight: 10, marginTop: 17 }}>
       <Card>
         <Card.Content>
-          <View
+          <SafeAreaView
             style={{
               flexDirection: "row",
               alignItems: "center",
@@ -21,13 +27,13 @@ const RenderItem = ({ item, items, delItem }) => {
               size={30}
               style={styles.close}
             ></Ionicons>
-            <View style={styles.textView}>
+            <SafeAreaView style={styles.textView}>
               <Text style={styles.time}>{item.time}</Text>
               <Text style={styles.name}>{item.name}</Text>
               <Text style={styles.description}>{item.description}</Text>
-            </View>
+            </SafeAreaView>
             <Avatar.Text label="🏠" />
-          </View>
+          </SafeAreaView>
         </Card.Content>
       </Card>
     </TouchableOpacity>

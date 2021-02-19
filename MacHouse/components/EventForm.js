@@ -2,9 +2,9 @@ import React, { useState } from "react";
 import {
   StyleSheet,
   TouchableOpacity,
-  View,
   Text,
   TextInput,
+  SafeAreaView,
 } from "react-native";
 import { Formik } from "formik";
 import DateTimePickerModal from "react-native-modal-datetime-picker";
@@ -23,7 +23,7 @@ export default function EventForm({ items, timestamp, addItem, setModalOpen }) {
     return mytime;
   }
   return (
-    <View>
+    <SafeAreaView>
       <Formik
         initialValues={{ name: "", time: "Event time", description: "" }}
         onSubmit={(values) => {
@@ -35,7 +35,7 @@ export default function EventForm({ items, timestamp, addItem, setModalOpen }) {
         }}
       >
         {(props) => (
-          <View>
+          <SafeAreaView>
             <Text style={styles.text}>Submit</Text>
             <TextInput
               style={styles.input}
@@ -76,17 +76,17 @@ export default function EventForm({ items, timestamp, addItem, setModalOpen }) {
               placeholder="Event time"
               onChangeText={props.handleChange("time")}
               value={props.values.time}
-			></TextInput>*/}
+			        ></TextInput>*/}
             <TouchableOpacity
               style={styles.submit}
               onPress={props.handleSubmit}
             >
               <Text style={styles.text}>Submit</Text>
             </TouchableOpacity>
-          </View>
+          </SafeAreaView>
         )}
       </Formik>
-    </View>
+    </SafeAreaView>
   );
 }
 
