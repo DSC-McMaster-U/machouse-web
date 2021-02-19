@@ -20,16 +20,20 @@ const Management = () => {
   const [shoppingListText, setShoppingListText] = useState("");
 
   const removeChore = (id) => {
+    //integrate with drive
     console.log("removed chore");
   };
 
   const removeShoppingItem = (id) => {
+    //integrate with drive
     console.log("removed shopping item");
   };
   const addShoppingListItem = (text) => {
+    //integrate with drive
     console.log("added item");
   };
   const addChore = (text) => {
+    //integrate with drive
     console.log("added chore");
   };
 
@@ -168,6 +172,7 @@ const styles = StyleSheet.create({
   content: {
     flex: 1,
     padding: 10,
+    paddingBottom: 150,
   },
   card: {
     height: 100,
