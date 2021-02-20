@@ -13,6 +13,8 @@
     "react": "16.13.1",
     "react-dom": "16.13.1",
     "react-native": "https://github.com/expo/react-native/archive/sdk-40.0.1.tar.gz",
+    "react-native-just-checkbox": "^1.0.12",
+    "react-native-paper": "^4.7.1",
     "react-native-web": "~0.13.12"
   },
   "devDependencies": {
