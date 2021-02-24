@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
 import { View, StyleSheet, KeyboardAvoidingView, Platform } from 'react-native';
 
-import MessageInput from '../components/MessageInput';
-import MessageList from '../components/MessageList';
-import NavBar from '../components/NavBar';
-import ScreenTitle from '../components/ScreenTitle';
+import MessageInput from '../components/Chat_Components/MessageInput';
+import MessageList from '../components/Chat_Components/MessageList';
+import NavBar from '../components/Chat_Components/NavBar';
+import ScreenTitle from '../components/Chat_Components/ScreenTitle';
 
 const ChatScreen = (props) => {
 	const [messages, setMessages] = useState([
