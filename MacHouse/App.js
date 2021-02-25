@@ -1,9 +1,11 @@
+
 import React from 'react';
 import { StatusBar } from "expo-status-bar";
 import { StyleSheet, Text, SafeAreaView, StatusBar } from 'react-native';
 import { DefaultTheme, Provider as PaperProvider } from "react-native-paper";
 import Calendar from './screens/Calendar';
 import ChatScreen from "./screens/chatScreen";
+import HomeScreen from "./screens/HomeScreen";
 
 const theme = {
   ...DefaultTheme,
@@ -21,6 +23,7 @@ export default function App() {
   <PaperProvider theme={theme}>
       <Management />
   </PaperProvider>
+  return <HomeScreen />;
 }
 
 const styles = StyleSheet.create({
@@ -29,4 +32,5 @@ const styles = StyleSheet.create({
 	},
 });
 export default App;
+
 
