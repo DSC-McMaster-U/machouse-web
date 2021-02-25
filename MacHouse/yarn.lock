@@ -5129,6 +5129,11 @@ react-native-iphone-x-helper@^1.3.1:
   resolved "https://registry.yarnpkg.com/react-native-iphone-x-helper/-/react-native-iphone-x-helper-1.3.1.tgz#20c603e9a0e765fd6f97396638bdeb0e5a60b010"
   integrity sha512-HOf0jzRnq2/aFUcdCJ9w9JGzN3gdEg0zFE4FyYlp4jtidqU03D5X7ZegGKfT1EWteR0gPBGp9ye5T5FvSWi9Yg==
 
+react-native-just-checkbox@^1.0.12:
+  version "1.0.12"
+  resolved "https://registry.yarnpkg.com/react-native-just-checkbox/-/react-native-just-checkbox-1.0.12.tgz#726b9c4970254f6e042298f328c87ddcf566c206"
+  integrity sha512-p8DCCv/sxUTAqDAPdfDqZPFj//4l4MR9vG/AfqjMRCeQg2wHNIq/Do1qu9bzqm7SlpSHeLd0q7kYsdjEcdCUfQ==
+
 react-native-paper@^4.7.1:
   version "4.7.1"
   resolved "https://registry.yarnpkg.com/react-native-paper/-/react-native-paper-4.7.1.tgz#9f22116d39e4a129be9fd4c8d7342d0f6a20245c"
