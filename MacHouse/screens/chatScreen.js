@@ -1,12 +1,13 @@
 import React, { useState } from 'react';
+import { useTheme } from 'react-native-paper';
 import { View, StyleSheet, KeyboardAvoidingView, Platform } from 'react-native';
 
 import MessageInput from '../components/Chat_Components/MessageInput';
 import MessageList from '../components/Chat_Components/MessageList';
-import NavBar from '../components/Chat_Components/NavBar';
 import ScreenTitle from '../components/Chat_Components/ScreenTitle';
 
 const ChatScreen = (props) => {
+	const { colors } = useTheme();
 	const [messages, setMessages] = useState([
 		{
 			sender: 'Leo S',
@@ -52,7 +53,6 @@ const ChatScreen = (props) => {
 				<MessageList messages={messages} />
 				<MessageInput onSend={displayMessagesHandler} />
 			</KeyboardAvoidingView>
-			<NavBar style={styles.bottom} />
 		</View>
 	);
 };
