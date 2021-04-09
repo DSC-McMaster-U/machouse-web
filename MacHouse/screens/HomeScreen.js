@@ -24,7 +24,7 @@ const MyComponent = () => {
 	return (
 		<SafeAreaView style={styles.container}>
 			<List.Section>
-				<List.Accordion key='{chooseHouse}' title='Choose house' left={(props) => <List.Icon {...props} key='{headHouses}' icon='home-account' />}>
+				<List.Accordion key='{chooseHouse}' title='Choose house' left={(props) => <List.Icon {...props} color='#F3C761' key='{headHouses}' icon='home-account' />} id='{chooseHouse}' style={{ ...styles.card, backgroundColor: '#850044' }} titleStyle={{ color: '#ECECEC', fontSize: 20, fontWeight: 'bold' }}>
 					<TouchableOpacity>
 						{DATA[0].list.map((item) => {
 							return <List.Item key='{childHouses}' title={item} />;
@@ -32,7 +32,7 @@ const MyComponent = () => {
 					</TouchableOpacity>
 				</List.Accordion>
 
-				<List.Accordion key='{joinHouse}' title='Join house' left={(props) => <List.Icon {...props} key='{headHousesJ}' icon='home-group' />}>
+				<List.Accordion key='{joinHouse}' title='Join house' left={(props) => <List.Icon {...props} color='#F3C761' key='{headHousesJ}' icon='home-group' />} id='{joinHouse}' style={{ ...styles.card, backgroundColor: '#850044' }} titleStyle={{ color: '#ECECEC', fontSize: 20, fontWeight: 'bold' }}>
 					<TouchableOpacity>
 						{DATA[1].list.map((item) => {
 							return <List.Item key='{childHousesJ}' title={item} />;
@@ -40,7 +40,7 @@ const MyComponent = () => {
 					</TouchableOpacity>
 				</List.Accordion>
 
-				<List.Accordion key='{settings}' title='Personal Settings' left={(props) => <List.Icon {...props} key='{headSettings}' icon='account-settings' />}>
+				<List.Accordion key='{settings}' title='Personal Settings' left={(props) => <List.Icon {...props} color='#F3C761' key='{headSettings}' icon='account-settings' />} id='{settings}' style={{ ...styles.card, backgroundColor: '#850044' }} titleStyle={{ color: '#ECECEC', fontSize: 20, fontWeight: 'bold' }}>
 					<TouchableOpacity>
 						{DATA[2].list.map((item) => {
 							return <List.Item key='{childSettings}' title={item} />;
@@ -56,7 +56,7 @@ const styles = StyleSheet.create({
 	container: {
 		flex: 1,
 		backgroundColor: '#fff',
-		marginBottom: 220,
+		marginBottom: 120,
 		justifyContent: 'center',
 	},
 	housecontainer: {
@@ -71,6 +71,13 @@ const styles = StyleSheet.create({
 		height: 50,
 		marginTop: '140%',
 	},
+	card: {
+		height: 100,
+		padding: 15,
+		borderRadius: 10,
+		margin: 5,
+	},
 });
+
 
 export default MyComponent;
