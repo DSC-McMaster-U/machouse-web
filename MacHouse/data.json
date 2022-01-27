@@ -1,8 +1,0 @@
-{
-    "tasks": ["Laundry","Wash Dishes", "Clean Bathroom", "Take out Trash", "Vacuum", "Clean Living room"],
-    "announcements": ["announcement1", "announcement2", "announcement3", "announcement4"],
-    "events": ["event11", "event2", "event3", "event4"]
-
-
-
-}
