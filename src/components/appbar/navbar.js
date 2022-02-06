@@ -1,6 +1,12 @@
 /*-------------------------------MUI and Icon Imports------------------------------------------*/
 import { AppBar, Toolbar, IconButton, Typography, Grid } from '@mui/material';
-import { HiHome, HiCalendar, HiChatAlt2, HiCurrencyDollar, HiLogout } from 'react-icons/hi';
+import {
+	HiHome,
+	HiCalendar,
+	HiChatAlt2,
+	HiCurrencyDollar,
+	HiLogout,
+} from 'react-icons/hi';
 
 /*-------------------------------Router Imports----------------------------------------------- */
 import { Link } from 'react-router-dom';
@@ -10,10 +16,24 @@ function NavBarComp(props) {
 		<AppBar position='static'>
 			<Toolbar>
 				<Grid container spacing={2}>
-					<Grid item container justifyContent='center' alignItems='center' xs={4}>
+					<Grid
+						item
+						container
+						justifyContent='center'
+						alignItems='center'
+						xs={4}
+					>
 						<Typography variant='h5'>{props.pageName}</Typography>
 					</Grid>
-					<Grid item container direction='row' justifyContent='center' alignItems='center' xs={4} variant>
+					<Grid
+						item
+						container
+						direction='row'
+						justifyContent='center'
+						alignItems='center'
+						xs={4}
+						variant
+					>
 						{/*I can do this more efficiently with a map but I'll add the optimization after finishing theming */}
 						<IconButton component={Link} to='/'>
 							<HiHome />
@@ -31,14 +51,23 @@ function NavBarComp(props) {
 							<HiCurrencyDollar />
 						</IconButton>
 					</Grid>
-					<Grid item container direction='row' justifyContent='center' alignItems='center' xs={4}>
+					<Grid
+						item
+						container
+						direction='row'
+						justifyContent='center'
+						alignItems='center'
+						xs={4}
+					>
 						<Grid item>
 							<IconButton>
 								<HiLogout />
 							</IconButton>
 						</Grid>
 						<Grid item>
-							<p style={{ color: 'rgb(11,54,96)', fontWeight: 'bold' }}>Logout</p>
+							<p style={{ color: 'rgb(11,54,96)', fontWeight: 'bold' }}>
+								Logout
+							</p>
 						</Grid>
 					</Grid>
 				</Grid>
