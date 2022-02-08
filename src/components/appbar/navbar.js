@@ -22,9 +22,9 @@ import Theme from '../../theme';
 function NavBarComp(props) {
 	const [iconColor, setIconColor] = useState(props.linkColors);
 	const colorClone = [...iconColor];
-	console.log(iconColor);
+	console.log(colorClone);
 
-	//List of buttons
+	//List of buttons to be rendered
 	const linkOptions = [
 		{ page: '', icon: <HiHome /> },
 		{ page: 'calendar', icon: <HiCalendar /> },
@@ -49,8 +49,6 @@ function NavBarComp(props) {
 			{link.icon}
 		</IconButton>
 	));
-
-	console.log(iconLinks);
 
 	return (
 		<ThemeProvider theme={Theme}>
