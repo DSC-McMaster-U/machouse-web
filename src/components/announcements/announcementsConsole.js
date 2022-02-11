@@ -1,10 +1,16 @@
-import React from 'react';
+import React, { useState } from 'react';
 import Card from '@mui/material/Card';
 import CardContent from '@mui/material/CardContent';
 import Typography from '@mui/material/Typography';
 import AnnouncementsCard from './announcementsCard';
+import TextField from '@mui/material/TextField';
+import Button from '@mui/material/Button';
+// import Grid from '@mui/material/Grid';
+// import Box from '@mui/material/Box';
 
 function AnnouncementsConsoleComp() {
+	const [newAnnouncement, setNewAnnouncement] = useState('');
+
 	var tempAnnouncementsData = [
 		{
 			id: 1,
@@ -56,6 +62,38 @@ function AnnouncementsConsoleComp() {
 						Announcements
 					</Typography>
 					{tempAnnouncements}
+
+					<div>
+						<TextField
+							size='small'
+							sx={{
+								marginTop: '12px',
+								backgroundColor: 'white',
+								maxWidth: '70%',
+							}}
+							id='outlined-basic'
+							variant='outlined'
+							value={newAnnouncement}
+							onChange={(e) => setNewAnnouncement(e.target.value)}
+							label='Write an announcement'
+						/>
+						<Button
+							size='small'
+							variant='contained'
+							sx={{
+								backgroundColor: '#20A39E',
+								marginTop: '15px',
+								marginLeft: '5px',
+							}}
+							onClick={() => {
+								alert(newAnnouncement);
+								console.log(newAnnouncement);
+								setNewAnnouncement('');
+							}}
+						>
+							Post
+						</Button>
+					</div>
 				</CardContent>
 			</Card>
 		</>
