@@ -1,0 +1,10 @@
+.inputs {
+	display: flex;
+	flex-direction: column;
+}
+
+#settings-card {
+    margin: 3em;
+    padding: 2em;
+    background-color: #f4f5f5;
+}

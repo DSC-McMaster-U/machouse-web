@@ -4,6 +4,7 @@ import HomeScreen from './routes/homeScreen';
 import CalendarScreen from './routes/calendarScreen';
 import ChatScreen from './routes/chatScreen';
 import LedgerScreen from './routes/ledgerScreen';
+import SettingsScreen from './routes/settingsScreen';
 
 function App() {
 	return (
@@ -13,6 +14,7 @@ function App() {
 				<Route path='calendar' element={<CalendarScreen />} />
 				<Route path='chat' element={<ChatScreen />} />
 				<Route path='ledger' element={<LedgerScreen />} />
+				<Route path='settings' element={<SettingsScreen />} />
 			</Routes>
 		</BrowserRouter>
 	);
