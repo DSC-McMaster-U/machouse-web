@@ -8,22 +8,22 @@ test('On initial render, Navbar is active', () => {
 	render(
 		<BrowserRouter>
 			<NavBar />
-            <Card>
-                <h2 />
-                <div>
-                    <input />
-                    <input />
-                    <input />
-                    <button />
-                </div>
-                <h2 />
-                <div>
-                    <input />
-                    <input />
-                    <input />
-                    <button />
-                </div>
-            </Card>
+			<Card>
+				<h2 />
+				<div>
+					<input />
+					<input />
+					<input />
+					<button />
+				</div>
+				<h2 />
+				<div>
+					<input />
+					<input />
+					<input />
+					<button />
+				</div>
+			</Card>
 		</BrowserRouter>
 	);
 });
