@@ -14,26 +14,27 @@ const SettingsCardComp = (props) => {
 	const currentEmailChangeHandler = (event) => {
 		event.preventDefault();
 		setCurrentEmail(event.target.value);
-		console.log(`Current Email changed to ${event.target.value}`) // Testing purposes
+		console.log(`Current Email changed to ${event.target.value}`); // Testing purposes
 	};
 
 	const newEmailChangeHandler = (event) => {
 		event.preventDefault();
 		setNewEmail(event.target.value);
-		console.log(`New Email changed to ${event.target.value}`) // Testing purposes
+		console.log(`New Email changed to ${event.target.value}`); // Testing purposes
 	};
 
 	const confirmEmailChangeHandler = (event) => {
 		event.preventDefault();
 		setConfirmEmail(event.target.value);
-		console.log(`Confirm Email changed to ${event.target.value}`) // Testing purposes
+		console.log(`Confirm Email changed to ${event.target.value}`); // Testing purposes
 	};
 
 	const emailSubmitHandler = (event) => {
 		event.preventDefault();
-		console.log("Email submitted") // Testing purposes
+		console.log('Email submitted'); // Testing purposes
 
-		props.emailData = { // TODO: Configure props.emailData
+		props.emailData = {
+			// TODO: Configure props.emailData
 			currentEmail: currentEmail,
 			newEmail: newEmail,
 			confirmEmail: confirmEmail,
@@ -47,26 +48,27 @@ const SettingsCardComp = (props) => {
 	const currentPasswordChangeHandler = (event) => {
 		event.preventDefault();
 		setCurrentPassword(event.target.value);
-		console.log(`Current Password changed to ${event.target.value}`) // Testing purposes
+		console.log(`Current Password changed to ${event.target.value}`); // Testing purposes
 	};
 
 	const newPasswordChangeHandler = (event) => {
 		event.preventDefault();
 		setNewPassword(event.target.value);
-		console.log(`New Password changed to ${event.target.value}`) // Testing purposes
+		console.log(`New Password changed to ${event.target.value}`); // Testing purposes
 	};
 
 	const confirmPasswordChangeHandler = (event) => {
 		event.preventDefault();
 		setConfirmPassword(event.target.value);
-		console.log(`Confirm Password changed to ${event.target.value}`) // Testing purposes
+		console.log(`Confirm Password changed to ${event.target.value}`); // Testing purposes
 	};
 
 	const passwordSubmitHandler = (event) => {
 		event.preventDefault();
-		console.log("Password submitted") // Testing purposes
+		console.log('Password submitted'); // Testing purposes
 
-		props.passwordData = { // TODO: Configure props.passwordData
+		props.passwordData = {
+			// TODO: Configure props.passwordData
 			currentPassword: currentPassword,
 			newPassword: newPassword,
 			confirmPassword: confirmPassword,
@@ -102,7 +104,11 @@ const SettingsCardComp = (props) => {
 					placeholder='Confirm Email'
 					onChange={confirmEmailChangeHandler}
 				/>
-				<button type='submit' className='submit-button' onClick={emailSubmitHandler}>
+				<button
+					type='submit'
+					className='submit-button'
+					onClick={emailSubmitHandler}
+				>
 					Submit
 				</button>
 			</div>
@@ -129,7 +135,11 @@ const SettingsCardComp = (props) => {
 					placeholder='Confirm Password'
 					onChange={confirmPasswordChangeHandler}
 				/>
-				<button type='submit' className='submit-button' onClick={passwordSubmitHandler}>
+				<button
+					type='submit'
+					className='submit-button'
+					onClick={passwordSubmitHandler}
+				>
 					Submit
 				</button>
 			</div>
