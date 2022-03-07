@@ -1,4 +1,4 @@
-import { Card } from '@mui/material';
+import { Button, Card, TextField } from '@mui/material';
 import { useState } from 'react';
 import './settingsCard.css';
 
@@ -83,65 +83,70 @@ const SettingsCardComp = (props) => {
 		<Card id='settings-card'>
 			<h2 className='header'>Change Email</h2>
 			<div className='inputs'>
-				<input
-					className='input'
+				<TextField
+					label='Current Email'
+					variant='standard'
 					type='text'
 					value={currentEmail}
-					placeholder='Current Email'
 					onChange={currentEmailChangeHandler}
 				/>
-				<input
-					className='input'
+				<TextField
+					label='New Email'
+					variant='standard'
 					type='text'
 					value={newEmail}
-					placeholder='New Email'
 					onChange={newEmailChangeHandler}
 				/>
-				<input
-					className='input'
+				<TextField
+					label='Confirm Email'
+					variant='standard'
 					type='text'
 					value={confirmEmail}
-					placeholder='Confirm Email'
 					onChange={confirmEmailChangeHandler}
 				/>
-				<button
-					type='submit'
-					className='submit-button'
-					onClick={emailSubmitHandler}
-				>
-					Submit
-				</button>
+				<div className='submit-button'>
+					<Button
+						variant='contained'
+						onClick={emailSubmitHandler}
+						type='submit'
+					>
+						Submit
+					</Button>
+				</div>
 			</div>
 			<h2 className='header'>Change Password</h2>
 			<div className='inputs'>
-				<input
-					className='input'
+				<TextField
+					label='Current Password'
+					variant='standard'
 					type='text'
 					value={currentPassword}
-					placeholder='Current Password'
 					onChange={currentPasswordChangeHandler}
 				/>
-				<input
-					className='input'
+				<TextField
+					label='New Password'
+					variant='standard'
 					type='text'
 					value={newPassword}
-					placeholder='New Password'
 					onChange={newPasswordChangeHandler}
 				/>
-				<input
-					className='input'
+				<TextField
+					label='Confirm Password'
+					variant='standard'
 					type='text'
 					value={confirmPassword}
-					placeholder='Confirm Password'
 					onChange={confirmPasswordChangeHandler}
 				/>
-				<button
-					type='submit'
-					className='submit-button'
-					onClick={passwordSubmitHandler}
-				>
-					Submit
-				</button>
+				<div className='submit-button'>
+					<Button
+						// className='submit-button'
+						variant='contained'
+						onClick={passwordSubmitHandler}
+						type='submit'
+					>
+						Submit
+					</Button>
+				</div>
 			</div>
 		</Card>
 	);

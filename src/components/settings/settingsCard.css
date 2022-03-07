@@ -3,6 +3,10 @@
 	flex-direction: column;
 }
 
+.submit-button {
+    padding-top: 1em;
+}
+
 #settings-card {
     margin: 3em;
     padding: 2em;
